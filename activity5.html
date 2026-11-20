@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="div.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+<li><a href="index.html">activity1</a></li>
+<li><a href="activity2.html">activity2</a></li>
+<li><a href="activity3.html">activity3</a></li>
+<li><a href="activity4.html">activity4</a></li>
+<li><a href="activity5.html">activity5</a></li>
+     </ul>
+    </nav>
+
+
+<div class="youtube">
+    <iframe
+        src="https://www.youtube.com/embed/-sPLtW4f-3I"
+        title="Mars Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+
+  <div class="container">
+    <div class="p">MARS
+    
+    <p>
+    Mars is the fourth planet from the Sun and the second-smallest planet in the solar system, famous as the Red Planet
+    </p>
+    
+    </div>
+
+    <div class="time">
+      <span id="time"></span>
+    </div>
+  </div>
+
+  <div class="picture">
+    <img src="mars.jpg" alt="Planet Mars">
+  </div>
+
+  <script>
+    function showTime() {
+      const now = new Date();
+
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+
+      let ampm = hours >= 12 ? "PM" : "AM";
+
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+
+      hours = String(hours).padStart(2, "0");
+      minutes = String(minutes).padStart(2, "0");
+      seconds = String(seconds).padStart(2, "0");
+
+      document.getElementById("time").textContent =
+        `${hours}:${minutes}:${seconds} ${ampm}`;
+    }
+
+    showTime();
+    setInterval(showTime, 1000);
+  </script>
+
+</body>
+</html>

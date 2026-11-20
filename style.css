@@ -1,0 +1,48 @@
+body {
+    font-size: 15pt;
+}
+
+
+
+/* BODY DESIGN */
+body {
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION BAR */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* CONTENT SPACE */
+body {
+    padding-top: 50px;
+}
